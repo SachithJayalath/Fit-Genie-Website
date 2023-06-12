@@ -1,0 +1,47 @@
+#feedback{
+  margin-bottom: 80px;
+}
+
+form label {
+    display: block;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  form input,
+  form select,textarea {
+    display: block;
+    width: 1000px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(60px);
+    border: none;
+  }
+  
+  form button[type="submit"],
+  form button[type="reset"] {
+    background-color: rgba(0,0,0,0.5);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  form button[type="submit"]:hover,
+  form button[type="reset"]:hover {
+    background-color: #ffffff;
+    color: #666;
+  }
+
+  #email-error{
+    font-weight: 600;
+    color: red;  
+  }

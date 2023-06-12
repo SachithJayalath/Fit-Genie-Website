@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FitGenie - Home Page</title>
+        <link rel="stylesheet" href="../Style Sheets/Main-Style.css">
+        <link rel="stylesheet" href="../Style Sheets/Forum-Style.css">
+        <script src="../Scripts/Forum-Script.js"></script>
+    </head>
+    <header>
+        <div>
+            <nav>
+            <a href="Main Page.html">
+                <img class= "logo" src="../Media/FitGenieLogo.png" alt="FitGenieLogo">
+            </a>
+            <ul>
+                <li><a class="active" href="Main Page.html">Home</a></li>
+                <li><a href="Buy Products.html">Buy Products</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="Gallery Page.html">Gallery</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><button id="Login-popup" onclick="window.location.href='Login.html'">Log in</button></li>
+        </ul>
+            </nav>
+        </div>
+    </header>
+    <body>
+        <div class="forum">
+            <form onsubmit="return validateForum(event)" onreset="return resetForum()" action="#" method="get" autocomplete="off" >
+                <div id="wrapper1">
+                    <h2>Take the First Step to a Healthier You: Answer These Questions to Build Your Plan!</h2>
+                    <div class="form-group">    
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" onkeyup="return namevalidate()">
+                    </div>
+                    <span class="error" id="name-error"></span>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" onkeyup="return agevalidate()">
+                        <label id="genderlabel"for="gender">Gender:</label>
+                        <select id="gender" name="gender" onchange="return gendervalidate()">
+                            <option value=""></option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Transgender</option>
+                            <option value="4">Non-binary</option>
+                            <option value="5">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <span class="error" id="age-error"></span>
+                    <span class="error" id="gender-error"></span>
+                    <div class="form-group">
+                        <label for="occupation">Occupation:</label>
+                        <input type="text" id="occupation" name="occupation" onkeyup="return occupationvalidate()">
+                    </div>
+                    <span class="error" id="occupation-error"></span>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" onkeyup="return emailvalidate()">
+                    </div>
+                    <span class="error" id="email-error"></span>
+                    <div>
+                        <button id="reset1" type="reset" class="button">Reset</button>
+                        <button type="button" class="button" id="next" onclick="return nextform()">Next</button>
+                    </div>
+                    <span class="error main-error" id="main-error1"></span>
+                </div>
+                <div id="wrapper2">
+                    <p>How would you describe your typical daily activity level?</p>
+                    <div class="radioButtons">
+                        <input type="radio" class="radioImages" id="pref1-option1" name="pref1" value="1" onclick="return pref1validate()">
+                        <label for="pref1-option1">Sedentary</label>
+
+                        <input type="radio" class="radioImages" id="pref1-option2" name="pref1" value="2" onclick="return pref1validate()">
+                        <label for="pref1-option2">Lightly active</label>
+
+                        <input type="radio" class="radioImages" id="pref1-option3" name="pref1" value="3" onclick="return pref1validate()">
+                        <label for="pref1-option3">Moderately active</label>
+
+                        <input type="radio" class="radioImages" id="pref1-option4" name="pref1" value="4" onclick="return pref1validate()">
+                        <label for="pref1-option4">Very active</label>
+
+                        <input type="radio" class="radioImages" id="pref1-option5" name="pref1" value="5" onclick="return pref1validate()">
+                        <label for="pref1-option5">Extremely active</label>
+                    </div>
+                    <span class="error" id="pref1-error"></span>
+                    <p>What is your primary fitness goal?</p>
+                    <div class="radioButtons">
+                        <input type="radio" class="radioImages" id="pref2-option1" name="pref2" value="1" onclick="return pref2validate()">
+                        <label for="pref2-option1">Weight loss</label>
+
+                        <input type="radio" class="radioImages" id="pref2-option2" name="pref2" value="2" onclick="return pref2validate()">
+                        <label for="pref2-option2">Muscle gain</label>
+
+                        <input type="radio" class="radioImages" id="pref2-option3" name="pref2" value="3" onclick="return pref2validate()">
+                        <label for="pref2-option3">General health and fitness</label>
+
+                        <input type="radio" class="radioImages" id="pref2-option4" name="pref2" value="4" onclick="return pref2validate()">
+                        <label for="pref2-option4">Sport-specific training</label>
+
+                        <input type="radio" class="radioImages" id="pref2-option5" name="pref2" value="5" onclick="return pref2validate()">
+                        <label for="pref2-option5">Rehabilitation</label>
+                    </div>
+                    <span class="error" id="pref2-error"></span>
+                    <p>Do you have any food allergies or dietary restrictions?</p>
+                    <div class="radioButtons">
+                        <input type="radio" class="radioImages" id="pref3-option1" name="pref3" value="1" onclick="return pref3validate()">
+                        <label for="pref3-option1">Gluten-free</label>
+
+                        <input type="radio" class="radioImages" id="pref3-option2" name="pref3" value="2" onclick="return pref3validate()">
+                        <label for="pref3-option2">Dairy-free</label>
+
+                        <input type="radio" class="radioImages" id="pref3-option3" name="pref3" value="3" onclick="return pref3validate()">
+                        <label for="pref3-option3">Nut-free</label>
+
+                        <input type="radio" class="radioImages" id="pref3-option4" name="pref3" value="4" onclick="return pref3validate()">
+                        <label for="pref3-option4">Vegan</label>
+
+                        <input type="radio" class="radioImages" id="pref3-option5" name="pref3" value="5" onclick="return pref3validate()">
+                        <label for="pref3-option5">None</label>
+                    </div>
+                    <span class="error" id="pref3-error"></span>
+                    <p>Do you prefer to exercise alone or with others?</p>
+                    <div class="radioButtons">
+                        <input type="radio" class="radioImages" id="pref4-option1" name="pref4" value="1">
+                        <label for="pref4-option1">Alone</label>
+
+                        <input type="radio" class="radioImages" id="pref4-option2" name="pref4" value="2">
+                        <label for="pref4-option2">With a workout partner</label>
+
+                        <input type="radio" class="radioImages" id="pref4-option3" name="pref4" value="3">
+                        <label for="pref4-option3">With only a person that you prefer</label>
+
+                        <input type="radio" class="radioImages" id="pref4-option4" name="pref4" value="4">
+                        <label for="pref4-option4">With a personal trainer</label>
+
+                        <input type="radio" class="radioImages" id="pref4-option5" name="pref4" value="5">
+                        <label for="pref4-option5">In a group fitness class</label>
+                    </div> 
+                    <div>
+                        <button id="reset2" type="reset" class="button">Reset</button>
+                        <button type="button" class="button" id="prev" onclick="return prevform()">Prev</button>
+                        <button type="submit" class="button" id="submit">Submit</button>
+                    </div>
+                    <span class="error main-error" id="main-error2"></span>                   
+                </div>
+            </form>
+        </div>
+        <footer class="main_footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                  <!-- website logo in footer -->
+                  <a href="Main Page.html">
+                    <img src="../Media/FitGenieLogo.png" alt="footer logo" width="50%" role="img" aria-label="link to home page"></a>
+                </div>
+                <div class="footer-navigation text-left" role="navigation" aria-label="Main">
+                  <h2>Navigation</h2>
+                  <!-- footer navigation -->
+                  <ul class="no-bullet">
+                      <li><a href="Main Page.html">HOME</a></li>
+                      <li><a href="Buy Products.html">BUY PRODUCTS</a></li>
+                      <li><a href="Quiz.html">QUIZ</a></li>
+                      <li><a href="Gallery Page.html">GALLERY</a></li>
+                      <li><a href="Feedback.html">FEEDBACK</a></li>
+                      <li><a href="About Us.html">ABOUT US</a></li>
+                  </ul>
+                </div>
+                <div class="footer-about">
+                  <!-- footer about area -->
+                  <h2>About Us</h2>
+                  <p class="about_us">
+                    Welcome to FitGenie! We are a team of fitness enthusiasts dedicated to helping you achieve your health goals. 
+                  With personalized workout plans, healthy eating tips, and expert advice, we provide the resources and support you need to live a happier, healthier life. 
+                  Join us today and start your journey towards a better you!
+                  </p>
+                </div>
+                <div class="footer-contact">
+                  <!-- footer contact info -->
+                  <h2><strong>Contact Info</strong></h2>
+                  <p>
+                    +94 112255698 <br /><br />
+                    FitGenie <br />
+                    Galle Road,<br />
+                    Galle.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <br>
+              <!-- page credits-link to page editor page -->
+              <p class="page-editor">Created by <a href="Editor's Pages/Sachith Jayalath EP.html" target="_blank">Sachith Jayalath</a></p>
+        </footer>   
+    </body>
+</html>

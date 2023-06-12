@@ -1,0 +1,269 @@
+body{
+  min-height: 85vh;
+}
+
+.forum{
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    padding: 43px;
+    width: 844px;
+    background-color: #fff2d3;
+    box-shadow: -20px 20px 30px 1px rgba(0,0,0,.5);
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    align-self: center;
+}
+
+#wrapper2{
+    line-height: 1em;
+    padding: 30px;
+}
+
+form h2 {
+    text-decoration: underline;
+    color: #000000;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+form label {
+    display: inline-block;
+    width: 120px;
+    height: 92px;
+    margin-top: 22px;
+    margin-bottom: -62px;
+    color: #000000;
+    font-size: 16px;
+    text-align: left;
+    margin-right: 20px;
+  }
+
+#genderlabel{
+    position: absolute;
+    top: 149px;
+    right:246px;
+}
+
+.form-group{
+    line-height: 4;
+    margin-bottom: -20px;
+}
+  
+form input,
+textarea {
+background:transparent;
+display: inline-block;
+vertical-align: middle;
+width: 545px;
+padding: 0px;
+border: none;
+border-bottom: 2px solid #000;
+margin: 30px 0;
+margin-bottom: 20px;
+font-size: 16px;
+color: #000000;
+outline: none;
+text-align: center;
+}
+
+#age::-webkit-inner-spin-button,
+#age::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+#age{
+width: 190px;
+}
+
+form select{
+background: inherit;
+position: absolute;
+display: inline-block;
+vertical-align: middle;
+padding: 0px;
+border: 2px solid #000;
+border-radius: 5px;
+margin: 30px 0;
+margin-bottom: 20px;
+font-size: 16px;
+color: #000000;
+outline: none;
+height: 31px;
+}
+
+#wrapper2 select{
+    position: relative;
+    width: 300px;
+}
+
+#gender{
+top: 159px;
+right: 99px;
+width: 200px;
+}
+
+form select::-ms-expand{
+    display: none;
+}
+
+form select:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  
+form select option {
+    font-size: 14px;
+    background-color: #fff2d3;
+    color: #000000;
+  }
+  
+form select option:hover, select option::selection {
+    background-color: rgb(154, 141, 123);
+  }
+  
+form select option:checked {
+    background-color:#fff2d3 ;
+  }
+
+.button {
+position: absolute;
+background-color: rgba(243, 183, 64, 0.5);
+color: #000000;
+padding: 13px 50px;
+border: none;
+border-radius: 10px;
+font-size: 15px;
+font-weight: bold;
+transition: background-color 0.2s ease-in-out;
+bottom: 28px; 
+}
+
+.button:hover {
+background-color: #c1a90e;
+color: #000000;
+}
+    
+
+#reset2{
+right:500px; 
+}
+
+#next{
+right: 99px;    
+}
+
+#prev{
+right: 650px;
+/* width: 20px; */
+text-align: center;    
+}
+
+#submit{
+right: 99px;    
+}
+.error{
+position: absolute;
+right:96px;
+font-weight: 50;
+font-size: 14;
+color: red;
+font-style: italic;
+}
+
+#name-error{
+top:149px;
+}
+
+#age-error{
+top:220px;
+left:244px;
+}
+
+#gender-error{
+top:220px;
+}
+
+#occupation-error{
+top:290px;
+}
+
+#email-error{
+top:359px;
+}
+
+#wrapper1{
+display: block;
+height: 449px;
+transition: height .2s ease;
+}
+
+#wrapper2{
+display: none;
+padding: 0px;
+height: 655px;
+}
+
+#wrapper2 .radioButtons,p{
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+#wrapper2 p{
+  font-style:italic;
+}
+
+.radioButtons{
+  width: 800px;
+  height: 100px;
+  display: flex;
+  /* background-color: #fff; */
+}
+
+.radioButtons label{
+  width:4000px;
+  height: 50px;
+  justify-content: center;
+  /* background-color: yellow; */
+  margin-top: 47px;
+  margin-left: 16px;
+}
+
+#pref1-error{
+  top: 49px;;
+  left:446px;
+  }
+
+#pref2-error{
+  top: 173px;;
+  left:291px;
+  }
+
+#pref3-error{
+  top: 300px;;
+  left: 434px;
+  }
+
+.main-error{
+  left: 188px;
+  color:rgb(129, 45, 45);
+  }
+
+#main-error1{
+  top: 413px;
+}
+#main-error2{
+  top: 600px;
+}
+
+footer{
+  margin-top: 30px;
+}

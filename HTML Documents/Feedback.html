@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>FitGenie - Feedback Page</title>
+            <link rel="stylesheet" href="../Style Sheets/Main-Style.css">
+            <link rel="stylesheet" href="../Style Sheets/Feedback-Style.css">
+            <script src="../Scripts/Feedback-Script.js"></script>
+        </head>
+        <body>
+            <header>
+              <div>
+                <nav>
+                  <!-- Website Logo -->
+                <a href="Main Page.html">
+                    <img class= "logo" src="../Media/FitGenieLogo.png" alt="FitGenieLogo">
+                </a>
+                <!-- Navigation -->
+                <ul>
+                    <li><a href="Main Page.html">Home</a></li>
+                    <li><a href="Buy Products.html">Buy Products</a></li>
+                    <li><a href="Quiz.html">Quiz</a></li>
+                    <li><a href="Gallery Page.html">Gallery</a></li>
+                    <li><a class="active" href="Feedback.html">Feedback</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><button id="Login-popup" onclick="window.location.href='Login.html'">Log in</button></li>
+                </ul>
+                </nav>
+            </div>
+            </header>
+            <main>
+              <!-- FeedBack Form -->
+                <section id="feedback">
+                    <h2>Send Us Your Feedback</h2>
+                    <form onsubmit="return validateForm()" onreset="return resetForm()" action="#" method="get">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" onkeyup="return emailvalidate()">
+                        <span id="email-error"></span>
+                        <label for="rating">Rate the web site:</label>
+                        <select id="rating" name="rating">
+                            <option value="">-- Please Select --</option>
+                            <option value="1">Poor</option>
+                            <option value="2">Fair</option>
+                            <option value="3">Good</option>
+                            <option value="4">Very Good</option>
+                            <option value="5">Excellent</option>
+                        </select>
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" name="comments" rows="5" ></textarea>
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </form>                  
+                </section>
+            </main>
+            <footer class="main_footer">
+              <div class="footer-content">
+                  <div class="footer-logo">
+                    <!-- website logo in footer -->
+                    <a href="Main Page.html">
+                      <img src="../Media/FitGenieLogo.png" alt="footer logo" width="50%" role="img" aria-label="link to home page"></a>
+                  </div>
+                  <div class="footer-navigation text-left" role="navigation" aria-label="Main">
+                    <h2>Navigation</h2>
+                    <!-- footer navigation -->
+                    <ul class="no-bullet">
+                        <li><a href="Main Page.html">HOME</a></li>
+                        <li><a href="Buy Products.html">BUY PRODUCTS</a></li>
+                        <li><a href="Quiz.html">QUIZ</a></li>
+                        <li><a href="Gallery Page.html">GALLERY</a></li>
+                        <li><a href="Feedback.html">FEEDBACK</a></li>
+                        <li><a href="About Us.html">ABOUT US</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-about">
+                    <!-- footer about area -->
+                    <h2>About Us</h2>
+                    <p class="about_us">
+                      Welcome to FitGenie! We are a team of fitness enthusiasts dedicated to helping you achieve your health goals. 
+                    With personalized workout plans, healthy eating tips, and expert advice, we provide the resources and support you need to live a happier, healthier life. 
+                    Join us today and start your journey towards a better you!
+                    </p>
+                  </div>
+                  <div class="footer-contact">
+                    <!-- footer contact info -->
+                    <h2><strong>Contact Info</strong></h2>
+                    <p>
+                      +94 112255698 <br /><br />
+                      FitGenie <br />
+                      Galle Road,<br />
+                      Galle.
+                    </p>
+                  </div>
+                </div>
+                <hr>
+                <br>
+                <!-- page credits-link to page editor page -->
+                <p class="page-editor">Created by <a href="Editor's Pages/Binuka Rajapaksha EP.html" target="_blank">Binuka Rajapaksha</a></p>
+          </footer>
+        </body>
+</html>

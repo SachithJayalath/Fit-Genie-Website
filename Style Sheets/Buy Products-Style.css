@@ -1,0 +1,318 @@
+/* 
+.logo{
+    position: absolute;
+    padding: 2px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: white;
+  }
+  
+  .centerNavBar{
+    display: flex;
+    justify-content: right;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+  } */
+  .back-video{
+    position: fixed;
+    padding-top: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+  
+  /* ul {
+    margin: 0;
+    padding-right: 0;
+    padding-top: 5px;
+      
+  }
+  
+  li {
+    display:inline;
+    font-size: 18px;
+    padding-right: 10px;
+  }
+  
+  a { 
+    padding-right: 13px;
+    text-decoration: none;
+    padding-left: 5px;
+    color: black;
+  }
+  
+  a:hover {
+  
+    text-decoration: 3px underline;
+    text-decoration-color: black;
+    text-underline-offset: 8px;
+  }
+  
+  .withoutLast{
+    border-right: 2px solid black; 
+  } */
+
+/* Forms */
+
+.firstLine form, .secondLine form, .thirdLine form, .application{
+    
+    display: inline-block;
+    margin: 20px auto auto 20px;
+    padding: 0 10px 10px;
+    border: 1px solid #666;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #666;
+    padding-top: 10px;
+    background-color:white;
+    font-family:'Raleway', sans-serif;
+
+}
+.firstLine .application{
+    float:right;
+    background-color: rgb(255, 255, 255, 0.9);
+}
+.secondLine{
+    margin-bottom: 50px;
+}
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* Body,Images */
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
+}
+   
+img{
+    border-radius: 25px;
+}
+h3 {
+    color: red;
+}
+
+legend {
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* Application */
+.application{
+    position:absolute;
+    top:152px;
+    right:30px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=tel], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------
+Buttons */
+
+input[type=button], button{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addtocButton {
+    width: 100%;
+    background-color: orange;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#buybutton{
+    width: 100%;
+    background-color:tomato;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#removeWhiteT{
+    background-color: red;
+}
+#removeBlackT{
+    background-color: red;
+}
+#removeHoddy{
+    background-color: red;
+}
+#removeBag{
+    background-color: red;
+}
+#removeUmbrella{
+    background-color: red;
+}#removeCap{
+    background-color: red;
+}
+
+input[type=submit]:hover {
+    background-color: orange;
+}
+
+input[type=radio] {
+    cursor: pointer;
+}    
+
+/******* WHITE T REMOVE BUTTON *************/
+#removeWhiteT {
+    display: none;
+}
+
+/******* BLACK T REMOVE BUTTON *************/
+#removeBlackT {
+    display: none;
+}
+
+/******* HODDY REMOVE BUTTON ***************/
+#removeHoddy {
+    display: none;
+}
+
+/******* BAG REMOVE BUTTON ****************/
+#removeBag {
+    display: none;
+}
+
+/******* UMBRELLA REMOVE BUTTON ***********/
+#removeUmbrella {
+    display: none;
+}
+
+/******** CAP REMOVE BUTTON ***************/
+#removeCap {
+    display: none;
+}
+
+/******** APPLICATION TABLE ***************/
+/* table tr td {
+    padding-top: 20px;
+} */
+
+table tr .lastcoloms {
+    width: 100px;
+    text-align: center;
+}
+
+/*******  SUMMARY ****************/
+
+.summary{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    background-color: rgba(255, 255, 255, 0.945);
+    padding: 5%;
+    border-radius: 8px;
+    border:2px solid black;
+    
+}
+
+.summaryForm h2{
+    text-align: center;
+}
+
+.cart table tr .firstColom {
+    width: 230px;
+    text-align: center;
+}
+
+.cart table tr th {
+    width: 150px;
+} 
+
+.cart table tr td {
+    text-align: center;
+}
+
+.bottombtn button{
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgb(14, 27, 44);
+  color: rgb(14, 27, 44);
+}
+
+.bottombtn button:hover{
+  border: 1px solid #DFF6FF;
+  background-color: rgb(223, 246, 255, 0.5);
+}
+
+.fontcontrol{
+    margin-left: 20px;
+    color: #ffffff;
+    flex-wrap: wrap;
+    width: 700px;
+}
+
+.buttonWrapper{
+    display: inline;
+    margin-left: 20px;
+}
+
+.fontButton{
+    border-radius: 5px;
+    background-color: #333;
+    width: 10%;
+    height: 35px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 3px solid black;
+    padding-top: 8px;
+    padding-left: 15px;
+
+}
+
+.fontButton:hover{
+    background-color: black;
+}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&family=Poppins:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    right: 100%;
+    box-sizing: border-box;
+}
+@keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(5%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+body {
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+overflow: hidden;
+min-height: 100vh;
+background: url('../Media/Background.jpg') no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+h1 {
+user-select: none;
+font-style: italic;
+font-size: 6rem;
+font-weight: 100%;
+color: #fff;
+-webkit-text-stroke:4px ;
+animation: slide-in 3s ease-out;
+animation-fill-mode: forwards;
+font-family: 'Open Sans', sans-serif;
+}
+
+@keyframes line-in-left {
+    0% {
+      transform: translateX(-600%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    80%{
+        transform: translateX(0);
+    }
+    100% {
+      transform: translateX(600%);
+    }
+  }
+@keyframes line-in-right {
+    0% {
+        transform: translateX(600%);
+    }
+    40% {
+        transform: translateX(0);
+    }
+    80%{
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-600%);
+    }
+    }
+
+  h1::before,
+  h1::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    top: 10%;
+    background-color: #fff;
+    animation: line-in-left 5s ease-out forwards;
+  }
+  h1::after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    top: 90%;
+    background-color: #fff;
+    animation: line-in-right 5s ease-out forwards;
+  }
+  
+  h1::before {
+    left: 0;
+    transform: translateX(0%);
+  }
+  
+  h1::after {
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  footer p {
+    opacity: 0;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 10;
+    font-family: 'Open Sans', sans-serif;
+    animation: fade-in 5s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    60% {
+        opacity: 1;
+      }
+  }
+  
